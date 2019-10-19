@@ -1,26 +1,21 @@
 import { templatePublish } from './views/templatePublish.js';
-
-// si el hash es igual #/home que se ejecute la funcion que me lleva a home asi igual
+//si el hash es igual #/home que se ejecute la funcion que me lleva a home asi igual
 //para el resto 
 const changeRouter = (hash) => {
 
-    if (hash === '#/publish') {
-        return showTemplate(hash);
+        if (hash === '#/publish') {
+            return showTemplate(hash);
+        }
+
     }
-
-}
-
-
-// exportando las funciones
+    // exportando las funciones
 export const showTemplate = (hash) => {
     const router = hash.substring(2);
     const containerRoot = document.getElementById('root');
     containerRoot.innerHTML = '';
 
-
     //abre el hash que se solicito y si no esta el caso  da error
     switch (router) {
-
         case 'publish':
             containerRoot.appendChild(templatePublish())
             break;
