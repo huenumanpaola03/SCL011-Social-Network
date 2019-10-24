@@ -1,6 +1,7 @@
-import { initFire } from '/firebase.js';
+console.log('Iniciando aplicación...');
+import { initFire } from './utils/firebase.js';
 import { initRouter } from './route.js';
-//Firebase
+// //Firebase
 const init = () => {
     initFire();
     initRouter()

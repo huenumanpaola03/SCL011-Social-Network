@@ -1,4 +1,7 @@
+// import firebase from 'firebase'
+
 export const initFire = () => {
+
     const firebaseConfig = {
         apiKey: "AIzaSyCoEh1ZQVu4OqArDCNtTQBRP54goBRf6yg",
         authDomain: "basededatos-redsocial.firebaseapp.com",
@@ -8,8 +11,6 @@ export const initFire = () => {
         messagingSenderId: "292479744480",
         appId: "1:292479744480:web:3e5b96fce63d7b607a1385"
     };
-
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
 }

@@ -3,12 +3,13 @@ import { templatePublish } from './views/templatePublish.js';
 //para el resto 
 const changeRouter = (hash) => {
 
-        if (hash === '#/publish') {
-            return showTemplate(hash);
-        }
-
+    if (hash === '#/publish') {
+        return showTemplate(hash);
     }
-    // exportando las funciones
+
+}
+
+// exportando las funcion
 export const showTemplate = (hash) => {
     const router = hash.substring(2);
     const containerRoot = document.getElementById('root');
