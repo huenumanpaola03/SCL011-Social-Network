@@ -1,18 +1,66 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!--links firebase-->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+
+    <link rel="stylesheet" href="style.css" />
 
 </head>
 
+
 <body>
-    <section id="root">
 
-    </section>
+    <div class="main-nav">
+        <div class="nav-toggle">
+            <div class="nav-toggle-bar"></div>
+        </div>
+        <!--
+        <a href="#/home"><img alt="logo" class="logo"></a>
+        <a href="#/login" id="login-btn">Iniciar Sesión</a>
+            <a href="#/registry" id="templateRegistry">Registrate</a>
+          -->
+        <a href="#/users" class="users"></a>
 
+        <nav class="nav"> </nav>
+    </div>
+
+
+    <main>
+        <div id="root"></div>
+    </main>
+
+    <footer></footer>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCoEh1ZQVu4OqArDCNtTQBRP54goBRf6yg",
+            authDomain: "basededatos-redsocial.firebaseapp.com",
+            databaseURL: "https://basededatos-redsocial.firebaseio.com",
+            projectId: "basededatos-redsocial",
+            storageBucket: "basededatos-redsocial.appspot.com",
+            messagingSenderId: "292479744480",
+            appId: "1:292479744480:web:3e5b96fce63d7b607a1385"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
 </body>
 

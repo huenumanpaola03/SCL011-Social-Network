@@ -1,25 +1,65 @@
-import { templatePublish } from './views/templatePublish.js';
-//si el hash es igual #/home que se ejecute la funcion que me lleva a home asi igual
-//para el resto 
-const changeRouter = (hash) => {
+/* import { templateLogin } from './views/templateLogin.js';
+import { templateRegistry } from './views/templateRegistry.js';*/
+import { templateHome } from './views/templateHome.js';
+import { templateRegistry, templateLogin } from './views/templateUsers.js';
+import { inicioo } from './views/inicio.js'
 
-    if (hash === '#/publish') {
+
+
+
+// si el hash es igual #/home que se ejecute la funcion que me lleva a home asi igual
+//para el resto 
+export const changeRouter = (hash) => {
+    if (hash === '') {
+        return showTemplate('#/home');
+    }
+
+    if (hash === '#/home') {
         return showTemplate(hash);
     }
 
+    if (hash === '#/login') {
+        return showTemplate(hash);
+    }
+    if (hash === '#/registry') {
+        return showTemplate(hash);
+    }
+    if (hash === '#/inicio') {
+        return showTemplate(hash);
+    }
+
+
+
 }
 
-// exportando las funcion
+
+
+
+// exportando las funciones 
 export const showTemplate = (hash) => {
     const router = hash.substring(2);
     const containerRoot = document.getElementById('root');
     containerRoot.innerHTML = '';
 
+
     //abre el hash que se solicito y si no esta el caso  da error
     switch (router) {
-        case 'publish':
-            containerRoot.appendChild(templatePublish())
+        case 'home':
+            containerRoot.appendChild(templateHome());
             break;
+
+        case 'login':
+            containerRoot.appendChild(templateLogin());
+            break;
+
+        case 'inicio':
+            containerRoot.appendChild(inicioo());
+            break;
+
+        case 'registry':
+            containerRoot.appendChild(templateRegistry());
+            break;
+
         default:
             containerRoot.innerHTML = `<p>Error 404</p>`
     }
@@ -27,9 +67,9 @@ export const showTemplate = (hash) => {
 
 
 //el hash es la ruta que cambia en mi app
-// inicializamos la ruta, al escuchar tre la funcion changeroute 
+// inicializamos la ruta, al escuchar la funcion changeroute 
 
-// si es que window tiene atributo de cambio agrega location de hash
+// si es que window tiene atributo de cambio agrega locacion de hash
 export const initRouter = () => {
     window.addEventListener('load', changeRouter(window.location.hash));
 
