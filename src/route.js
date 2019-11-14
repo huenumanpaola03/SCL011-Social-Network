@@ -2,10 +2,8 @@
 import { templateRegistry } from './views/templateRegistry.js';*/
 import { templateHome } from './views/templateHome.js';
 import { templateRegistry, templateLogin } from './views/templateUsers.js';
-import { inicioo } from './views/inicio.js'
-
-
-
+import { templatemuro } from './views/templatemuro.js'
+console.log("esta aqui en rutas");
 
 // si el hash es igual #/home que se ejecute la funcion que me lleva a home asi igual
 //para el resto 
@@ -24,7 +22,7 @@ export const changeRouter = (hash) => {
     if (hash === '#/registry') {
         return showTemplate(hash);
     }
-    if (hash === '#/inicio') {
+    if (hash === '#/muro') {
         return showTemplate(hash);
     }
 
@@ -52,8 +50,8 @@ export const showTemplate = (hash) => {
             containerRoot.appendChild(templateLogin());
             break;
 
-        case 'inicio':
-            containerRoot.appendChild(inicioo());
+        case 'muro':
+            containerRoot.appendChild(templatemuro());
             break;
 
         case 'registry':

@@ -25,12 +25,6 @@ export const templateLogin = () => {
 
 
 
-
-
-
-
-
-
 export const templateRegistry = () => {
     const containerRegistry = document.createElement("div");
 

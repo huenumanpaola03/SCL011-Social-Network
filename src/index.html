@@ -5,19 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-    <!--links firebase-->
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
-
-
     <link rel="stylesheet" href="style.css" />
 
 </head>
@@ -46,21 +33,16 @@
 
     <footer></footer>
 
+    <!-- Script general de Firebase (core-nucleo)-->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCoEh1ZQVu4OqArDCNtTQBRP54goBRf6yg",
-            authDomain: "basededatos-redsocial.firebaseapp.com",
-            databaseURL: "https://basededatos-redsocial.firebaseio.com",
-            projectId: "basededatos-redsocial",
-            storageBucket: "basededatos-redsocial.appspot.com",
-            messagingSenderId: "292479744480",
-            appId: "1:292479744480:web:3e5b96fce63d7b607a1385"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
+    <!-- Inicializando los productos de frebasee -->
+    <!-- Autentificacion-->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <!-- Base de datos Firestore-->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <!-- Llamando al archivo donde se inicializa la credencia de firebase, rutas y observador-->
+    <script type="module" src="app.js"></script>
 
 </body>
 
