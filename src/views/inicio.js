@@ -1,21 +1,27 @@
+import { SignOff } from '../controllers/controllersStart.js'
 
-export const inicioo = () => {
+export const sesionIniciada = () =>{
+
   
-    const containerHome = document.createElement('div');
-  
-   
-    const contentHome = 
-    ` <p> sesion iniciada ya dentro de la aplicacion </p>
-    <button id="close">cerrar sesion</button>`;
- 
+    const containerCreate = document.createElement("div");
     
 
-    containerHome.innerHTML = contentHome;
+  
+       const contentCreate = 
+    `<p> sesion iniciada ya dentro de la aplicacion </p>
+    <button id="close">cerrar sesion</button>`;
+    containerCreate.innerHTML = contentCreate;
 
+    const btnClose = containerCreate.querySelector("#close");
+    btnClose.addEventListener("click",()=>{
+       
+      SignOff();
 
+    })
+    
+    
+    return containerCreate;
+    }
+  
 
-
- 
-    return containerHome;
-  }
-
+   

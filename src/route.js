@@ -4,7 +4,7 @@
 import { templateRegistry } from './views/templateRegistry.js';*/
 import { templateHome } from './views/templateHome.js';
 import { templateRegistry, templateLogin } from './views/templateUsers.js';
-import { inicioo } from './views/inicio.js'
+import { sesionIniciada } from './views/inicio.js'
 
 
 
@@ -58,7 +58,7 @@ export const showTemplate = (hash) => {
 
 
     case 'inicio':
-    containerRoot.appendChild(inicioo());
+    containerRoot.appendChild(sesionIniciada());
     break;  
 
      case 'registry':
