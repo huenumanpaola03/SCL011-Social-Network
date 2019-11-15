@@ -9,7 +9,7 @@ export const templatemuro = () => {
         <nav> 
         <a href="#">Inicio</a>
         <a href="#">Perfil</a>
-        <button id="close">cerrar sesion</button>
+        <a href="#"id="close">cerrar sesion</a>
         </nav>
     </header>
     <article>
@@ -137,12 +137,12 @@ export const templatemuro = () => {
 
     })
 
-            const btnClose = contenTempMuro.querySelector("#close");
-            btnClose.addEventListener("click",()=>{
-               
-              SignOff();
-        
-            })
+    const btnClose = contenTempMuro.querySelector("#close");
+    btnClose.addEventListener("click", () => {
+
+        SignOff();
+
+    })
 
     return contenTempMuro;
 }

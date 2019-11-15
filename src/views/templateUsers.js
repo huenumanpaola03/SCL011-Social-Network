@@ -4,11 +4,20 @@ export const templateLogin = () => {
     const containerLogin = document.createElement("div");
     const contentLogin =
         `
- <input id="email" type="email" placeholder="ingrese su email">
-<input id="password" type="password" placeholder="ingrese su clave">
-<button id="login">INGRESAR</button>
-<a href="#/registry"><button>Registrarse</button></a>
-
+        <article id="signin" class="container">
+            <header class="container-circle"><img class="img-fluid" src="./img/avatar_1526901472.png"></header>
+           
+            <div class="login__row">
+                <input id="email" type="email" placeholder="ingrese su email">
+            </div>
+            <div class="login__row">
+                 <input id="password" type="password" placeholder="ingrese su clave">
+            <div class="login__row">
+            <div>
+            <button id="login">INGRESAR</button>
+            </div>
+            <a href="#/registry"><button>Registrarse</button></a>
+        </article>
 `
     containerLogin.innerHTML = contentLogin;
 
@@ -30,11 +39,18 @@ export const templateRegistry = () => {
 
     const contentRegistry =
         `
-    <P>Crear usuario</P>
-    <input id="emailRegistro" type="email" placeholder="ingrese su email">
-    <input id="passwordRegistro" type="password" placeholder="ingrese una clave">
-    <button id="registry">REGISTRARSE</button>
-    <button id="registryGoogle">REGISTRARSE con google</button>
+        <article id="signin" class="container">
+        <header class="container-circle"><img class="img-fluid" src="./img/avatar_1526901472.png"></header>
+             <p>Crear usuario</p>
+         <input id="emailRegistro" type="email" placeholder="ingrese su email">
+         <input id="passwordRegistro" type="password" placeholder="ingrese una clave">
+        <div>
+         <button id="registry">REGISTRARSE</button>
+         </div>
+         <button id="registryGoogle">REGISTRARSE con google</button>
+         
+         <p class="login_signin"> ¿Ya tienes una cuenta? <a href="#/login">Iniciar sesion</a></p> 
+         </article>
     `;
     containerRegistry.innerHTML = contentRegistry;
 
