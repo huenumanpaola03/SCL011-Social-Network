@@ -4,9 +4,8 @@
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(function() {
 
-             
-                    window.location.hash = "#/muro";
-                
+                window.location.hash = "#/muro";
+
             })
             .catch(function(error) {
                 // Handle Errors here.

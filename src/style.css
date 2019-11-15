@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgba(63, 147, 231, 0.89);
+    font-family: "Roboto", helvetica, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    border: 10px solid #0000;
+    margin: auto;
+    font-size: 1em;
+    line-height: 50px;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+
+/* Botones */
+
+.btns {
+    background-color: green;
+    height: 50px;
+    width: 75%;
+    border: 2px solid green;
+    font-size: 18px;
+    color: white;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+#btnUpdate {
+    display: none;
+}
