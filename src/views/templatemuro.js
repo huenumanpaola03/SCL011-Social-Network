@@ -5,31 +5,45 @@ import { SignOff } from '../controllers/controllersStart.js'
 export const templatemuro = () => {
     const contenTempMuro = document.createElement("section");
     const templateMuro = `
+    <div class="muro">
+
+    
     <header> 
-        <nav> 
+        <div class="routerMuro"> 
         <a href="#">Inicio</a>
         <a href="#">Perfil</a>
         <a href="#"id="close">cerrar sesion</a>
-        </nav>
+        </div>
     </header>
-    <article>
 
-        <textarea id="newPost" placeholder="Escribe aqui" rows="4" cols="50"></textarea>
+   <div class="createPost">
+        <h2> create post </h2>
+    </div>
+    
+    <article>
+ 
+       
+    <textarea id="newPost" placeholder="Escribe aqui"></textarea>
+       <div class="btnsPost">
         <button id="btnPost">Publicar</button>
         <button id="btnUpdate">Actualizar</button>
-    
+       </div>
     </article>
+
     <table>
     <thead>
         <tr>
         <th>Publicacion</th>
         </tr>
     </thead>
+
     <tbody id="templdata">
     
     </tbody
     
     </table>
+    
+    </div>
 `
     contenTempMuro.innerHTML = templateMuro;
 
@@ -64,10 +78,10 @@ export const templatemuro = () => {
                   <article id="container${element.id}">
 
                         <span id="post${element.id}">${element.data().post}</span> 
-
+                        <div class="btnsEdit">
                         <button id="dele${element.id}" class="btnDelete" >Eliminar</button>
-
                         <button id="upda${element.id,element.data().post}" class="btnEdit">Editar</button>
+                        </div>
                   </article>
                   
                  `
@@ -110,7 +124,7 @@ export const templatemuro = () => {
                         document.getElementById("btnUpdate").style.display = "block";
                         //Oculto el boton de publicar
                         document.getElementById("btnPost").style.display = "none";
-
+                        btnUpdate
 
                         document.getElementById("btnUpdate").addEventListener('click', async() => {
                             const newValue = document.querySelector("#newPost").value;

@@ -3,21 +3,31 @@ import { controllersRegistry, controllersLogin, loginGoogle } from '../controlle
 export const templateLogin = () => {
     const containerLogin = document.createElement("div");
     const contentLogin =
-        `
-        <article id="signin" class="container">
-            <header class="container-circle"><img class="img-fluid" src="./img/avatar_1526901472.png"></header>
-           
-            <div class="login__row">
-                <input id="email" type="email" placeholder="ingrese su email">
-            </div>
-            <div class="login__row">
-                 <input id="password" type="password" placeholder="ingrese su clave">
-            <div class="login__row">
-            <div>
-            <button id="login">INGRESAR</button>
-            </div>
-            <a href="#/registry"><button>Registrarse</button></a>
-        </article>
+`
+<article id="signin" class="containerLogin">
+<div class="textLogin">
+<h1>Sing In</h1>
+
+</div>                     
+<div class="login__row">
+<a>ingrese su email</a>
+<input class="inputEmail" id="email" type="email" placeholder="Email">
+<a>ingrese su clave</a>
+<input class="inputPassword" id="password" type="password" placeholder="Password">
+</div>
+
+<div class="btnsLogin">
+
+<button class="btnLogin" id="login">INGRESAR</button>
+
+<div class="routerRegistry">
+<a>¿no tienes cuenta?<a/>
+ <a class="aRegistry" href="#/registry">Registrate</a> 
+</div>
+
+</div>
+
+</article>
 `
     containerLogin.innerHTML = contentLogin;
 
@@ -39,17 +49,37 @@ export const templateRegistry = () => {
 
     const contentRegistry =
         `
-        <article id="signin" class="container">
-        <header class="container-circle"><img class="img-fluid" src="./img/avatar_1526901472.png"></header>
-             <p>Crear usuario</p>
-         <input id="emailRegistro" type="email" placeholder="ingrese su email">
-         <input id="passwordRegistro" type="password" placeholder="ingrese una clave">
-        <div>
-         <button id="registry">REGISTRARSE</button>
-         </div>
-         <button id="registryGoogle">REGISTRARSE con google</button>
+ <article  class="containerRegistry">
+
+    <div class="textRegistry">
+        <h1>Crear usuario</h1>
+    </div>
+       
+    <div class="inputsRegistry">
+    <a>ingrese su email<a/>
+        <input  id="emailRegistro" type="email" placeholder="Email">
+    <a>cree una clave<a/>  
+        <input  id="passwordRegistro" type="password" placeholder="Password">
+    </div>
+     
+
+    <div class="BtnRegistry">
+        <button id="registry">REGISTRARSE</button>
+    </div>
+    
+<div class="optionsR">
+    <div class="rGogle">
+    <a> registrarse con <a id="registryGoogle">google</a> </a>
+    </div>
+  
          
-         <p class="login_signin"> ¿Ya tienes una cuenta? <a href="#/login">Iniciar sesion</a></p> 
+    <div class="rLogin">
+        <a> ¿Ya tienes una cuenta? 
+            <a id="A-iniciarsesion" href="#/login">Iniciar sesion</a>
+        </a> 
+    </div>
+</div>
+
          </article>
     `;
     containerRegistry.innerHTML = contentRegistry;

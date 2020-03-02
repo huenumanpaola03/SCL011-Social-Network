@@ -27,6 +27,8 @@ export const toPost = (uid, post) => {
 }
 
 //Funcion de firebase que nos permite Leer los datos en la interfaz en tiempo real
+
+//que lea todos los post suscribiendose a la coleccion completa!!!----
 export const readPost = () => {
 
     let data = new Promise((resolve, reject) => {
